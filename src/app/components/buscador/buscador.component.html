@@ -1,4 +1,4 @@
-<h1>Héroes <small>Marvel y DC</small></h1>
+<h1>Buscando: <small>{{ termino }}</small></h1>
 <hr>
 
 <div class="card-columns">
@@ -8,10 +8,16 @@
             <h5 class="card-title pt-2">{{ heroe.nombre }}</h5>
             <p class="card-text">{{ heroe.bio}}</p>
             <p class="card-text"><small class="text-muted">Año de aparición: {{ heroe.aparicion | date:'y'}}</small></p>
-            <button (click)="this.verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">
+            <button (click)="this.verHeroefil(i)" type="button" class="btn btn-outline-primary btn-block">
               Ver más...
             </button>
             <!--<a [routerLink]="['/heroe',i]" class="btn btn-outline-primary" target="_blank">Ver más link...</a>-->
         </div>
     </div>
+</div>
+
+<div class="d-flex justify-content-center mt-3">
+    <button [routerLink]="['/heroes']" type="button" class="btn btn-outline-danger btn-block">
+    Volver a Héroes
+  </button>
 </div>
