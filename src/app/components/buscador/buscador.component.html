@@ -1,19 +1,18 @@
 <h1>Buscando: <small>{{ termino }}</small></h1>
 <hr>
 
-<div class="card-columns">
-    <div class="card animated fadeIn fast p-3" *ngFor="let heroe of heroes; let i= index">
-        <img class="card-img-top img-fluid" [src]='heroe.img' [alt]="heroe.nombre">
-        <div class="card-block">
-            <h5 class="card-title pt-2">{{ heroe.nombre }}</h5>
-            <p class="card-text">{{ heroe.bio}}</p>
-            <p class="card-text"><small class="text-muted">Año de aparición: {{ heroe.aparicion | date:'y'}}</small></p>
-            <button (click)="this.verHeroefil(i)" type="button" class="btn btn-outline-primary btn-block">
-              Ver más...
-            </button>
-            <!--<a [routerLink]="['/heroe',i]" class="btn btn-outline-primary" target="_blank">Ver más link...</a>-->
+<div *ngIf="heroes.length === 0" class="row animated fadeIn fast">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No existe resultados con el término: <strong>{{ termino}}</strong>
         </div>
+
     </div>
+
+</div>
+
+<div class="card-columns">
+    <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes; let i= index"></app-heroe-tarjeta>
 </div>
 
 <div class="d-flex justify-content-center mt-3">

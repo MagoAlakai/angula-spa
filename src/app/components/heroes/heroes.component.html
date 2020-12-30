@@ -2,16 +2,5 @@
 <hr>
 
 <div class="card-columns">
-    <div class="card animated fadeIn fast p-3" *ngFor="let heroe of heroes; let i= index">
-        <img class="card-img-top img-fluid" [src]='heroe.img' [alt]="heroe.nombre">
-        <div class="card-block">
-            <h5 class="card-title pt-2">{{ heroe.nombre }}</h5>
-            <p class="card-text">{{ heroe.bio}}</p>
-            <p class="card-text"><small class="text-muted">Año de aparición: {{ heroe.aparicion | date:'y'}}</small></p>
-            <button (click)="this.verHeroe(i)" type="button" class="btn btn-outline-primary btn-block">
-              Ver más...
-            </button>
-            <!--<a [routerLink]="['/heroe',i]" class="btn btn-outline-primary" target="_blank">Ver más link...</a>-->
-        </div>
-    </div>
+    <app-heroe-tarjeta [heroe]="heroe" [index]="i" *ngFor="let heroe of heroes; let i= index"></app-heroe-tarjeta>
 </div>

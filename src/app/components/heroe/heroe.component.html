@@ -2,6 +2,7 @@
 <hr>
 
 <div class='row animated fadeIn fast'>
+
     <div class="col-md-5">
         <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
     </div>
@@ -15,7 +16,18 @@
             <img *ngIf="heroe.casa === 'Marvel'" height="30px" widght="80px" src="/assets/img/1200px-MarvelLogo.svg.png" alt="Marvel">
         </div>
         <br><br>
-        <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block">Regresar</a>
+        <div class="row d-flex justify-content-center">
+            <button [routerLink]="['/heroes']" class="btn btn-outline-danger col-sm-5 col-11 btn-lg p-1 m-2">Regresar</button>
+            <button (click)="verEditarHeroe()" class="btn btn-outline-primary col-sm-5 col-11 btn-lg p-1 m-2">Editar</button>
+        </div>
+        <div id="editarHeroe" class="d-none mt-3">
+            <div class="form-group">
+                <label for="">Editar Nombre: <strong>{{ heroe.nombre}}</strong></label>
+                <div class="row d-flex-inline justify-content-between">
+                    <input #editarNombre type="search" class="form-control col-7 ml-3" placeholder="Introduce nuevo nombre">
+                    <button (click)="editarHeroe(editarNombre.value)" class="btn btn-outline-success btn-sm col-4 mr-2">Guardar</button>
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>

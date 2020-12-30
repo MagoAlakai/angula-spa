@@ -4,7 +4,7 @@ import { AboutComponent } from './components/about/about.component';
 import {  HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
-import { HeroefiltradoComponent } from "./components/heroefiltrado/heroefiltrado.component";
+import { ListadoComponent } from './components/listado/listado.component';
 
 
 const ROUTES: Routes = [
@@ -13,7 +13,7 @@ const ROUTES: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'heroe/:id', component: HeroeComponent },
   { path: 'buscar/:termino', component: BuscadorComponent },
-  { path: 'heroefil/:id', component: HeroefiltradoComponent },
+  { path: 'listado', component: ListadoComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
 

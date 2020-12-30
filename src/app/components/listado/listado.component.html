@@ -1,0 +1,20 @@
+<h1>Listado de Héroes - <small>Marvel y DC</small></h1>
+<hr>
+
+<div class="list-group">
+    <div class="list-group-item list-group-item-action" *ngFor="let heroe of heroes; let i= index">
+        <span class="d-flex justify-content-between">
+          <img class=" img-fluid " [src]='heroe.img' [alt]="heroe.nombre " width="60px " height="60px ">
+          <h5 class='align-content-center'>{{ heroe.nombre | uppercase}} <small class="text-muted "> ({{ heroe.aparicion | date:'y'}})</small></h5>
+          <div>
+            <img *ngIf="heroe.casa==='DC' " height="60px " widght="60px " src="/assets/img/DC_Comics_logo.svg.png " alt="DC ">
+            <img *ngIf="heroe.casa==='Marvel' " height="30px " widght="80px " src="/assets/img/1200px-MarvelLogo.svg.png " alt="Marvel ">
+          </div>
+          <button (click)="this.verHeroe(i) " type="button " class="btn btn-outline-primary btn-sm ">
+            Ver más...
+          </button>
+        </span>
+    </div>
+</div>
+
+<!--[class.active]="isActive " (mouseover)="active() " (mouseout)="unactive() "-->

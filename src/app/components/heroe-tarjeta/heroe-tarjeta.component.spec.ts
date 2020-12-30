@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroefiltradoComponent } from './heroefiltrado.component';
+import { HeroeTarjetaComponent } from './heroe-tarjeta.component';
 
-describe('HeroefiltradoComponent', () => {
-  let component: HeroefiltradoComponent;
-  let fixture: ComponentFixture<HeroefiltradoComponent>;
+describe('HeroeTarjetaComponent', () => {
+  let component: HeroeTarjetaComponent;
+  let fixture: ComponentFixture<HeroeTarjetaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeroefiltradoComponent ]
+      declarations: [ HeroeTarjetaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeroefiltradoComponent);
+    fixture = TestBed.createComponent(HeroeTarjetaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

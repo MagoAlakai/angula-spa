@@ -18,7 +18,8 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
-import { HeroefiltradoComponent } from './components/heroefiltrado/heroefiltrado.component';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
+import { ListadoComponent } from './components/listado/listado.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HeroefiltradoComponent } from './components/heroefiltrado/heroefiltrado
     HeroesComponent,
     HeroeComponent,
     BuscadorComponent,
-    HeroefiltradoComponent
+    HeroeTarjetaComponent,
+    ListadoComponent
   ],
   imports: [
     BrowserModule,
