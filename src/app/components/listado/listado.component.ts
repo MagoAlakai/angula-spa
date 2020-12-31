@@ -28,12 +28,4 @@ export class ListadoComponent implements OnInit {
     this.router.navigate(['/heroe', i]);
   }
 
-  active(){
-    this.isActive = true;
-  }
-
-  unactive(){
-    this.isActive = false;
-  }
-
 }
