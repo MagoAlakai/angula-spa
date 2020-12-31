@@ -6,8 +6,8 @@
         <img class_="col-3" [src]='heroe.img' [alt]="heroe.nombre " width="40px" height="40px">
         <h6 class='align-content-center text-center col-4 mb-0'>{{ heroe.nombre | uppercase}} <small class="text-muted "> ({{ heroe.aparicion | date:'y'}})</small></h6>
         <div class_="col-3">
-            <img *ngIf="heroe.casa==='DC' " height="35px " widght="35px " src="/assets/img/DC_Comics_logo.svg.png " alt="DC ">
-            <img *ngIf="heroe.casa==='Marvel' " height="20px " width="50px " src="/assets/img/1200px-MarvelLogo.svg.png " alt="Marvel ">
+            <img *ngIf="heroe.casa==='DC' " height="35px " widght="35px " src="./assets/img/DC_Comics_logo.svg.png " alt="DC ">
+            <img *ngIf="heroe.casa==='Marvel' " height="20px " width="50px " src="./assets/img/1200px-MarvelLogo.svg.png " alt="Marvel ">
         </div>
         <button (click)="this.verHeroe(i) " type="button " class="btn btn-outline-primary btn-sm col-2">
           Ver más...
