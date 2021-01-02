@@ -78,7 +78,7 @@ export class HeroesService {
   buscarHeroes(termino: string): Array<Heroe>{
     this.heroesArr = [];
     termino = termino.toLocaleLowerCase();
-    for (let i: number = 0; i < this.heroes.length; i++){
+    for (let i = 0; i < this.heroes.length; i++){
       let heroe = this.heroes[i];
       let nombre = heroe.nombre.toLowerCase();
       if (nombre.indexOf(termino) >= 0){

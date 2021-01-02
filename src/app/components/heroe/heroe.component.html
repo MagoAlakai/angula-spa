@@ -24,7 +24,7 @@
             <div class="form-group">
                 <label for="">Editar Nombre: <strong>{{ heroe.nombre}}</strong></label>
                 <div class="row d-flex-inline justify-content-between">
-                    <input #editarNombre type="search" class="form-control col-7 ml-3" placeholder="Introduce nuevo nombre">
+                    <input #editarNombre type="search" (keyup.enter)="editarHeroe(editarNombre.value)" class="form-control col-7 ml-3" placeholder="Introduce nuevo nombre">
                     <button (click)="editarHeroe(editarNombre.value)" class="btn btn-outline-success btn-sm col-4 mr-2">Guardar</button>
                 </div>
             </div>

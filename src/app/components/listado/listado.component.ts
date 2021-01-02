@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HeroesService, Heroe } from '../../services/heroes.service';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listado',
@@ -11,7 +11,6 @@ export class ListadoComponent implements OnInit {
 
   @Input() heroe: any = {};
 
-  isActive: boolean = false;
   heroes: Heroe[] = [];
 
   // tslint:disable-next-line:variable-name
@@ -24,7 +23,7 @@ export class ListadoComponent implements OnInit {
     this.heroes = this._heroesService.getHeroes();
   }
 
-  verHeroe(i){
+  verHeroe(i): void{
     this.router.navigate(['/heroe', i]);
   }
 

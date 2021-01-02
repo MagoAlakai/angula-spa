@@ -18,7 +18,7 @@ export class HeroeComponent implements OnInit {
                private _heroesService: HeroesService,
                private router: Router
               ) {
-    this.activatedRoute.params.subscribe( params =>{
+    this.activatedRoute.params.subscribe( params => {
       this.heroe = this._heroesService.getHeroe( params.id);
       console.log(this.heroe);
     });
@@ -32,17 +32,21 @@ export class HeroeComponent implements OnInit {
     this.router.navigate(['/heroe']);
   }*/
 
-  verEditarHeroe(){
-    let editor:HTMLDivElement = (<HTMLDivElement>document.getElementById('editarHeroe'));
+  verEditarHeroe(): void{
+    const editor: HTMLDivElement = (document.getElementById('editarHeroe') as HTMLDivElement);
     editor.classList.remove('d-none');
   }
 
   editarHeroe(editarNombre: string): void{
     console.log(this.heroe);
-    this.heroe.nombre = editarNombre;
-    let editor:HTMLDivElement = (<HTMLDivElement>document.getElementById('editarHeroe'));
-    editor.classList.add('d-none');
-    alert(`Has cambiado el nombre de este héroe a ${this.heroe.nombre}`);
+    if (editarNombre === ''){
+      alert(`No has introducido ningún nombre`);
+    }else{
+      this.heroe.nombre = editarNombre;
+      const editor: HTMLDivElement = (document.getElementById('editarHeroe') as HTMLDivElement);
+      editor.classList.add('d-none');
+      alert(`Has cambiado el nombre de este héroe a ${this.heroe.nombre}`);
+    }
   }
 
 

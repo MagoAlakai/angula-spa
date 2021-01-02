@@ -13,12 +13,12 @@ export class BuscadorComponent implements OnInit {
 
 
   @Input() heroe: Heroe;
-  @Input() index:number;
-  heroes:Heroe[] = [];
+  @Input() index: number;
+  heroes: Heroe[] = [];
   termino: any;
 
   constructor( private activatedRoute: ActivatedRoute,
-               private _heroesService:HeroesService,
+               private _heroesService: HeroesService,
                private router: Router,
                ) {
 

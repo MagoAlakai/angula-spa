@@ -6,9 +6,15 @@
         <div class="alert alert-info" role="alert">
             No existe resultados con el término: <strong>{{ termino}}</strong>
         </div>
-
     </div>
+</div>
 
+<div *ngIf="termino === ''" class="row animated fadeIn fast">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            Por favor introduzca un término de búsqueda
+        </div>
+    </div>
 </div>
 
 <div class="card-columns">
